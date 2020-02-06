@@ -14,10 +14,12 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("Selected date:\n\(selectedDate)")
+//            Divider()
+//            DatePicker(selection: $selectedDate, label: {
+//                Text("Date\n")
+//            })
             Divider()
-            DatePicker(selection: $selectedDate, label: {
-                Text("Date\n")
-            })
+            DatePicker("Date", selection: $selectedDate, displayedComponents: [.hourAndMinute])
         }.padding()
     }
 }
