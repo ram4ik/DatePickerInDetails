@@ -13,11 +13,11 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            DatePicker(selection: $selectedDate, label: {
-                Text("Date")
-            })
+            Text("Selected date:\n\(selectedDate)")
             Divider()
-            Text("Selected date: \(selectedDate)")
+            DatePicker(selection: $selectedDate, label: {
+                Text("Date\n")
+            })
         }.padding()
     }
 }
