@@ -9,8 +9,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selectedDate = Date()
+
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            DatePicker(selection: $selectedDate, label: {
+                Text("Date")
+            })
+            Divider()
+            Text("Selected date: \(selectedDate)")
+        }.padding()
     }
 }
 
